@@ -21,7 +21,6 @@
  */
 
 /** Zend_Controller_Router_Route_Abstract */
-require_once 'Zend/Controller/Router/Route/Abstract.php';
 
 /**
  * Hostname Route
@@ -134,7 +133,6 @@ class Zend_Controller_Router_Route_Hostname extends Zend_Controller_Router_Route
     public function getRequest()
     {
         if ($this->_request === null) {
-            require_once 'Zend/Controller/Front.php';
             $this->_request = Zend_Controller_Front::getInstance()->getRequest();
         }
 
@@ -303,7 +301,6 @@ class Zend_Controller_Router_Route_Hostname extends Zend_Controller_Router_Route
                 } elseif (isset($this->_defaults[$name])) {
                     $host[$key] = $this->_defaults[$name];
                 } else {
-                    require_once 'Zend/Controller/Router/Exception.php';
                     throw new Zend_Controller_Router_Exception($name . ' is not specified');
                 }
             } else {

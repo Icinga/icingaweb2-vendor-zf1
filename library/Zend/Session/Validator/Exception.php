@@ -24,7 +24,6 @@
 /**
  * @see Zend_Session_Exception
  */
-require_once 'Zend/Session/Exception.php';
 
 
 /**
