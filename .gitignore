@@ -1,5 +1,4 @@
-# Exclude all hidden files
-.*
-
-# Except those related to git
-!.git*
+## Editors
+.*.sw[op]
+*~
+/.idea/
